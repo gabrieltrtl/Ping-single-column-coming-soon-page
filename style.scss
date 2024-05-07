@@ -1,0 +1,193 @@
+// Imports
+@import 'utilities';
+
+// CSS RESET
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+input, button, textarea, select {
+  font: inherit;
+}
+
+ol, ul {
+	list-style: none;
+}
+
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  border: none;
+}
+
+// Project Start
+
+body {
+  font-family: "Libre Franklin", sans-serif;
+  min-height: 100vh;
+}
+
+.logotype {
+  margin: 0 auto;
+  padding-top: 5.0625rem;
+  margin-bottom: 2rem;
+}
+
+.hero {
+  max-width: 302px;
+  margin: 0 auto 120px auto;
+  text-align: center;
+  @include device(desktop) {
+    max-width: 712px;
+    margin: 0 auto 72px auto;
+  }
+}
+
+.hero__title {
+  font-size: map-get($fonts, "$medium2");
+  color: $color2;
+  margin-bottom: 15px;
+  span {
+    font-weight: 200;
+    color: $color3;
+  }
+  @include device(desktop) {
+  font-size: map-get($fonts, "$large");
+  }
+}
+
+.hero__form {
+  max-width: 282px;
+  margin-bottom: 72px;
+  @include device(desktop) {
+    max-width: 637px;
+    margin: 0 auto 94px auto;
+  }
+}
+
+.form__legend {
+  margin-bottom: 32px;
+  color: $color2;
+  font-size: map-get($fonts, "$small");
+  @include device(desktop) {
+    margin-bottom: 40px;
+    font-size: map-get($fonts, "$medium1");
+  }
+}
+
+.form__fs {
+  border: none;
+}
+
+.form__label {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+#email {
+  display: block;
+  border-radius: 28px;
+  border: 1px solid $color5;
+  width: 100%;
+  padding: 10px 0 10px 32px;
+  margin-bottom: 10px;
+  &::placeholder {
+    color: #B8C7ED;
+    font-size: map-get($fonts, "$small");
+    } 
+    @include device(desktop) {
+    width: initial;
+    display: inline-block;
+    padding: 18px 188px 18px 30px;
+    margin-right: 16px;
+    &::placeholder {
+        font-size: 16px;
+      }
+    }
+}
+
+.form__btn {
+  color: $color1;
+  background-color: $color4;
+  font-size: map-get($fonts, "$small");
+  font-weight: 600;
+  width: 100%;
+  padding: 12px 0;
+  border-radius: 28px;
+  box-shadow: 0 4px 4px 0 rgba($color: #000000, $alpha: .25);
+  @include device(desktop) {
+    width: initial;
+    padding: 19px 62px;
+    font-size: initial;
+  }
+}
+
+.form__error {
+  font-size: map-get($fonts, "$small");
+  margin-top: 6px;
+  margin-left: 30px;
+  display: block;
+  color: #FF5466;
+  font-style: italic;
+  text-align: left;
+}
+
+.hero__img {
+  @include device(desktop) {
+    max-width: 640px;
+  }
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 27px;
+  margin-bottom: 27px; 
+  @include device(desktop) {
+    margin-bottom: 49px;
+  }
+}
+
+.footer__social {
+  display: flex;
+  gap: 11.7px;
+}
+
+.icon__wrapper {
+  border: 1px solid rgba($color: #4C7BF3, $alpha: .15);
+  border-radius: 50%;
+  padding: 7px 10px;
+  max-width: 31px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon {
+  color: $color4;
+}
+
+.footer__copy {
+  color: $color3;
+  font-size: map-get($fonts, "$small");
+}
